@@ -1,0 +1,9 @@
+POST http://localhost/api-qr-tandem/v1/create-qr.php
+Content-Type: "application/json"
+
+{
+    "data": "soy un crack",
+    "nombre_ref":"crack que no es droga",
+    "description": "tonteria",
+    "created_by": 3
+}

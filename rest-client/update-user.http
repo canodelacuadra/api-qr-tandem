@@ -1,0 +1,8 @@
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: "application/json"
+
+{
+   "id":1,
+    "email": "concilio@gmail.com",
+    "role":"admin"
+}
