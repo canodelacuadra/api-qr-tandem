@@ -1,7 +1,14 @@
 <?php
+require 'middleware.php'; // Asegúrate de que la ruta es correcta
+
+
 require "../config/cors.php";
 require "../config/database.php";
-$sql = "SELECT
+
+$userId = verificarToken();
+if ($userId) {
+    // El usuario está autenticado, permite el acceso al endpoint
+    $sql = "SELECT
     qr_codes.id AS qr_id,
     qr_codes.data AS qr_data,
     qr_codes.nombre_ref AS qr_nombre_ref,
@@ -20,5 +27,9 @@ FROM qr_codes
     $qr_codes = $stmt->fetchAll();
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode(['qr_codes' => $qr_codes]);
+
+
+}
+
     ?>
     

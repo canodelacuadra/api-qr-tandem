@@ -1,4 +1,3 @@
--- Active: 1718606722856@@127.0.0.1@3306
 DROP DATABASE IF EXISTS tandem_qr_db;
 CREATE DATABASE tandem_qr_db;
 USE tandem_qr_db;
