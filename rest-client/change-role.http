@@ -1,0 +1,7 @@
+PUT http://localhost/api-qr-tandem/v1/change-role.php
+Content-Type: "application/json"
+
+{
+    "email": "gerente@gmail.com",
+    "role":"admin"
+}

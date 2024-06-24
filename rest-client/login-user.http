@@ -2,6 +2,6 @@ GET  http://localhost/api-qr-tandem/v1/login-user.php
 Content-Type: "application/json"
 
 {
-    "email": "jenyh@gmail.com",
-    "password": "012345"
+    "email": "gerente@gmail.com",
+    "password": "asdf"
 }
