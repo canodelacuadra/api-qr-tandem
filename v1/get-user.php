@@ -1,6 +1,8 @@
 <?php
 require '../config/cors.php';
 require '../config/database.php';
+require '../vendor/autoload.php'; // Cargar el autoloader de Composer
+
 
 $input = json_decode(file_get_contents('php://input'), true);
 
