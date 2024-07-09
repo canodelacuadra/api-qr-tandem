@@ -1,9 +1,14 @@
 <?php
-$host = 'localhost';
-$db = 'tandem_qr_db';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
+require '../vendor/autoload.php'; // Ajusta la ruta según sea necesario
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_DATABASE'];
+$user = $_ENV['DB_USERNAME'];
+$pass = $_ENV['DB_PASSWORD'];
+$charset = $_ENV['DB_CHARSET'];
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [

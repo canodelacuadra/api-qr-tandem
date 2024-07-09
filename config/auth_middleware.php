@@ -1,10 +1,18 @@
 <?php
-//require './database.php';
 require '../vendor/autoload.php'; // Cargar el autoloader de Composer
+require '../config/database.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
+
+
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
-function authenticate() {
+
+
+function authenticate($requiredRole = null) {
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
     header("Access-Control-Allow-Headers: Authorization, Content-Type");
@@ -25,8 +33,16 @@ function authenticate() {
 
         if ($jwt) {
             try {
-                $secretKey = '142345';
+                 //$secretKey = '142345';
+                 $secretKey = $_ENV['SECREt_KEY'];
                 $decoded = JWT::decode($jwt, new Key($secretKey, 'HS256'));
+
+                // Verificar el rol del usuario si se requiere
+                if ($requiredRole && (!isset($decoded->role) || $decoded->role != $requiredRole)) {
+                    http_response_code(403);
+                    echo json_encode(['message' => 'Permiso denegado']);
+                    exit();
+                }
 
                 // Token es válido, devolver los datos decodificados
                 return $decoded;

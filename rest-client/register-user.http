@@ -2,9 +2,9 @@ POST http://localhost/api-qr-tandem/v1/register-user.php
 Content-Type: "application/json"
 
 {
-    "nombre": "Gerente Aplicacion",
-    "delegacion":"El Escorial",
-    "email": "gerente@gmail.com",
+    "nombre": "Penelope González",
+    "delegacion":"Aranjuez",
+    "email": "penelope@gmail.com",
     "password": "asdf"
 }
 

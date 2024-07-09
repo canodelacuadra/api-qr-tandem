@@ -2,7 +2,27 @@ PUT http://localhost/api-qr-tandem/v1/update-user.php
 Content-Type: "application/json"
 
 {
-   "id":1,
-    "email": "concilio@gmail.com",
+   "id": 1,
+    "email": "gerente@gmail.com",
     "role":"admin"
+}
+
+###
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: "application/json"
+
+{
+   "id":2,
+    "email": "empleado@gmail.com",
+    "role":"employee"
+}
+
+###
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: "application/json"
+
+{
+   "id":3,
+    "email": "invitado@gmail.com",
+    "role":"guest"
 }

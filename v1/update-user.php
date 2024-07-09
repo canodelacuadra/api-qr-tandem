@@ -1,5 +1,6 @@
 <?php
 require '../config/cors.php';
+require '../vendor/autoload.php';
 require '../config/database.php';
 // Obtener el cuerpo de la solicitud y decodificar el JSON
 $input = json_decode(file_get_contents('php://input'), true);

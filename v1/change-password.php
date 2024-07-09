@@ -1,11 +1,14 @@
 <?php
 require '../config/cors.php';
+require '../vendor/autoload.php';
 require '../config/database.php';
 
 $input = json_decode(file_get_contents('php://input'), true);
 
 $email = $input['email'];
-$password = $input['password'];
+//$password = $input['password'];
+$password = password_hash($input['password'], PASSWORD_DEFAULT);
+
 
 
 $sql_check = "SELECT email FROM users WHERE email = ?";
