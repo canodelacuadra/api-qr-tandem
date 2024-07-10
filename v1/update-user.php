@@ -5,15 +5,15 @@ require '../config/database.php';
 // Obtener el cuerpo de la solicitud y decodificar el JSON
 $input = json_decode(file_get_contents('php://input'), true);
 
-if (isset($input['id']) && isset($input['email']) && isset($input['role'])) {
-    $userId = $input['id'];
+if (isset($input['nombre']) AND $input['nombre']!=""  && isset($input['email'])AND $input['email']!="" && isset($input['delegacion'])AND $input['delegacion']!="") {
+    $nombre = $input['nombre'];
     $email = $input['email'];
-    $role = $input['role'];
+    $delegacion = $input['delegacion'];
 
     // Consulta SQL para actualizar el usuario
-    $sql = "UPDATE users SET email = ?, role = ? WHERE id = ?";
+    $sql = "UPDATE users SET nombre = ?, delegacion = ? WHERE email = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email, $role, $userId]);
+    $stmt->execute([$nombre, $delegacion, $email]);
 
     if ($stmt->rowCount() > 0) {
         header('Content-Type: application/json; charset=utf-8');
@@ -26,6 +26,6 @@ if (isset($input['id']) && isset($input['email']) && isset($input['role'])) {
 } else {
     header('Content-Type: application/json; charset=utf-8');
     http_response_code(400);
-    echo json_encode(['message' => 'Datos incompletos']);
+    echo json_encode(['message' => 'Datos incompletos en la entrada, por favor rellenalos']);
 }
 ?>
