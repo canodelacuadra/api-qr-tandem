@@ -3,9 +3,9 @@ DELETE  http://localhost/api-qr-tandem/v1/delete-user.php
 Content-Type: application/json
 
 {
-    "email": "rosa@gmail.com"
+    "email": "robertob@gmail.com"
 }
-### borrar con email inválido
+### borrar con email no existente
 DELETE  http://localhost/api-qr-tandem/v1/delete-user.php
 Content-Type: application/json
 

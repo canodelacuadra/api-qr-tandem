@@ -3,9 +3,9 @@ POST http://localhost/api-qr-tandem/v1/register-user.php
 Content-Type: "application/json"
 
 {
-    "nombre": "Roberto Solo",
-    "delegacion":"Valdemoro",
-    "email": "roberto@gmail.com",
+    "nombre": "Roberto Brasero",
+    "delegacion":"Ciudad Real",
+    "email": "robertob@gmail.com",
     "password": "asdf"
 }
 

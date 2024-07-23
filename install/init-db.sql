@@ -14,7 +14,7 @@ CREATE TABLE users (
 CREATE TABLE qr_codes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     data VARCHAR(255) NOT NULL UNIQUE,
-    nombre_ref VARCHAR(255),
+    nombre_ref VARCHAR(255) NOT NULL UNIQUE,
     description TEXT,
     created_by INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
