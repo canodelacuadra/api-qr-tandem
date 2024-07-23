@@ -5,10 +5,9 @@ require '../vendor/autoload.php';
 use \Firebase\JWT\JWT;
 
 // Clave secreta para firmar el token (debería ser segura y no compartida)
-//$secretKey = '142345';
-$secretKey = $_ENV['SECRET_KEY'];
-
-
+$secretKey = '142345';
+//$secretKey = $_ENV['SECRET_KEY'];
+// recoger los datos json de la solicitud http
 $input = json_decode(file_get_contents('php://input'), true);
 
 $email = $input['email'];
@@ -39,6 +38,7 @@ if ($user && password_verify($password, $user['password'])) {
         'user' => [
             'id' => $user['id'],
             'email' => $user['email'],
+            'image_url'=> $user['image_url'],
             'role' => $user['role']
 
         ]
