@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php'; // Cargar el autoloader de Composer
 require '../config/auth_middleware.php';
-$decoded = authenticate(); // Llama al middleware y almacena los datos decodificados si el token es válido
+$decoded = authenticate('admin'); // Llama al middleware y almacena los datos decodificados si el token es válido
 require '../config/cors.php';
 require '../config/database.php';
 

@@ -21,6 +21,6 @@ Content-Type: "application/json"
 
 {
    
-    "email": "invitado@gmail.com",
+    "email": "guest@gmail.com",
     "password": "asdf"
 }

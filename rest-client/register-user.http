@@ -9,6 +9,28 @@ Content-Type: "application/json"
     "password": "asdf"
 }
 
+### TC001 Caso de prueba: Todos los datos correctos
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "employee",
+    "delegacion":"Ciudad Real",
+    "email": "employee@gmail.com",
+    "password": "asdf"
+}
+
+### TC001 Caso de prueba: Todos los datos correctos
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "guest",
+    "delegacion":"Ciudad Real",
+    "email": "guest@gmail.com",
+    "password": "asdf"
+}
+
 ### TC002-1 Falta algún dato, en este delegación
 POST http://localhost/api-qr-tandem/v1/register-user.php
 Content-Type: "application/json"
