@@ -3,10 +3,10 @@ POST http://localhost/api-qr-tandem/v1/create-qr.php
 Content-Type: "application/json"
 
 {
-    "data": "bienvenido a holanda",
-    "nombre_ref": "prueba2 ",
+    "data": "me gusta mi trabajo",
+    "nombre_ref": "qrdiferente",
     "description": "prueba",
-    "created_by": 2
+    "created_by": 1
 }
 
 ### TODOS LOS DATOS VALIDOS

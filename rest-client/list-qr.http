@@ -1,1 +1,9 @@
-GET http://localhost/api-qr-tandem/v1/list-qr.php
+### Obtener la lista de códigos QR
+GET http://localhost/api-qr-tandem/install/qr-endpoint.php
+Accept: application/json
+
+### Obtener la lista de códigos QR con encabezado de autorización (si es necesario)
+GET http://localhost/api-qr-tandem/install/qr-endpoint.php
+Accept: application/json
+Authorization: Bearer your_token_here
+ 
