@@ -1,10 +1,8 @@
 <?php
+require '../config/cors.php';
 require '../vendor/autoload.php'; // Ajusta la ruta según sea necesario
 require '../config/database.php';
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Authorization, Content-Type");
 
 $targetDir = "../images/users/";
 $response = [];
