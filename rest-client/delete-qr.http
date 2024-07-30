@@ -1,6 +1,17 @@
+
+
+### Eliminar un código QR existente
 DELETE http://localhost/api-qr-tandem/v1/delete-qr.php
-Content-Type: "application/json"
+Content-Type: application/json
 
 {
-   "id":1
+    "nombre_ref": "qrdiferente"
+}
+
+### Intentar eliminar un código QR que no existe
+DELETE http://localhost/api-qr-tandem/v1/delete-qr.php
+Content-Type: application/json
+
+{
+    "nombre_ref": "QR inexistente"
 }

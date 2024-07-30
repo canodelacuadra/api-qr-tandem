@@ -1,3 +1,9 @@
+
+### Obtener la lista de usuarios
 GET http://localhost/api-qr-tandem/v1/list-users.php
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTkzOTEzMTUsImV4cCI6MTcxOTM5NDkxNSwidXNlcklkIjoxLCJlbWFpbCI6ImdlcmVudGVAZ21haWwuY29tIn0.wDl-VKtFYd_oG1TEM9ihFBv33AoIgdtkva7Czxry_f
-Content-Type: "application/json"
+Accept: application/json
+
+### Obtener la lista de usuarios con encabezado de autorización (si es necesario)
+GET http://localhost/api-qr-tandem/v1/list-users.php
+Accept: application/json
+Authorization: Bearer your_token_here
